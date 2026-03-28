@@ -1,8 +1,11 @@
+import pandas as pd
 import matplotlib.pyplot as plt
 
 def analyze_data(df, column=None):
     print("\n📊 WEATHER ANALYSIS REPORT")
-    print("=" * 40)
+    print("=" * 45)
+
+    print(f"\n📊 Total Records: {len(df)}")
 
     print("\n📁 Available columns:")
     print(list(df.columns))
@@ -21,8 +24,8 @@ def analyze_data(df, column=None):
 
     print("\n📈 Statistics:")
     print(f"➡ Average Temperature : {avg_temp:.2f}")
-    print(f"⬆ Max Temperature     : {max_temp}")
-    print(f"⬇ Min Temperature     : {min_temp}")
+    print(f"⬆ Max Temperature     : {max_temp:.2f}")
+    print(f"⬇ Min Temperature     : {min_temp:.2f}")
 
     # Trend detection
     trend = df[temp_col].diff().mean()
@@ -38,11 +41,22 @@ def analyze_data(df, column=None):
     # Plot
     try:
         plt.figure()
-        plt.plot(df[temp_col])
-        plt.title("Temperature Trend")
-        plt.xlabel("Records")
+
+        if "Formatted Date" in df.columns:
+            df["Formatted Date"] = pd.to_datetime(df["Formatted Date"], utc=True).dt.tz_localize(None)
+            plt.plot(df["Formatted Date"], df[temp_col])
+            plt.xticks(rotation=45)
+            plt.xlabel("Date")
+        else:
+            plt.plot(df[temp_col])
+            plt.xlabel("Records")
+
         plt.ylabel(temp_col)
+        plt.title("Temperature Trend")
         plt.grid()
-        plt.show()
+
+        plt.savefig("temperature_trend.png")
+        print("\n📊 Graph saved as temperature_trend.png")
+
     except Exception as e:
         print("❌ Plotting failed:", e)
