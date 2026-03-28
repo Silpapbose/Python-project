@@ -1,0 +1,14 @@
+[project]
+name = "weather-analyzer"
+version = "0.1.0"
+description = "CLI tool to analyze weather data from CSV"
+authors = [{ name = "Ashish Sajeev" }]
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "matplotlib"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
