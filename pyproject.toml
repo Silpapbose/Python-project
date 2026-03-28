@@ -1,8 +1,5 @@
 [project]
 name = "weather-analyzer"
-
-[project]
-name = "weather-analyzer"
 version = "0.1.0"
 description = "CLI tool to analyze weather data from CSV"
 authors = [{ name = "silpa bose" }]
