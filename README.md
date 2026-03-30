@@ -63,7 +63,7 @@ weather-analyzer/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 Clone the repository:
 
@@ -110,7 +110,7 @@ python -m weather_analyzer --file data/weather.csv --column "Temperature (C)"
 
 ---
 
-## 📊 Output
+##  Output
 
 The tool provides:
 
@@ -120,7 +120,7 @@ The tool provides:
 
 ---
 
-## 📁 Dataset
+##  Dataset
 
 The dataset used is a weather dataset containing:
 
@@ -135,7 +135,7 @@ Place the dataset inside: data/weather.csv
 
 ---
 
-## ⚠️ Notes
+##  Notes
 
 * The project uses a local CSV dataset (no API dependency)
 * Graph is saved as an image instead of opening a GUI window
@@ -143,7 +143,7 @@ Place the dataset inside: data/weather.csv
 
 ---
 
-## ✅ Conclusion
+##  Conclusion
 
 This project demonstrates how to:
 
