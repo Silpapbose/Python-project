@@ -1,12 +1,12 @@
 
-# 🌦️ Weather Analyzer
+Weather Analyzer
 
 A Python-based command-line tool to analyze weather data from a CSV dataset.
 This project demonstrates Python packaging, data analysis, and visualization using real-world weather data.
 
 ---
 
-## 👤 Author
+## Author
 
 **Silpa Bose**
 
