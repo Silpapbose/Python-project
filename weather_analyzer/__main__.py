@@ -3,7 +3,7 @@ from weather_analyzer.loader import load_data
 from weather_analyzer.analysis import analyze_data
 
 def main():
-    print("🚀 Starting Weather Analyzer...\n")
+    print(" Starting Weather Analyzer...\n")
 
     parser = argparse.ArgumentParser(description="Weather Analyzer CLI")
 
@@ -26,7 +26,7 @@ def main():
     df = load_data(args.file)
 
     if df is None:
-        print("❌ Failed to load dataset.")
+        print(" Failed to load dataset.")
         return
 
     analyze_data(df, args.column)
