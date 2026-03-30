@@ -14,7 +14,7 @@ This project demonstrates Python packaging, data analysis, and visualization usi
 
 ## Project Overview
 
-This project reads weather data from a CSV file and provides useful insights such as:
+This project reads weather data from a dataset sourced from Kaggle and provides useful insights such as:
 
 * Average, minimum, and maximum temperature
 * Temperature trends over time
