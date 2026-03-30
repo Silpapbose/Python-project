@@ -1,5 +1,5 @@
 
-Weather Analyzer
+**Weather Analyzer**
 
 A Python-based command-line tool to analyze weather data from a CSV dataset.
 This project demonstrates Python packaging, data analysis, and visualization using real-world weather data.
@@ -12,7 +12,7 @@ This project demonstrates Python packaging, data analysis, and visualization usi
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This project reads weather data from a CSV file and provides useful insights such as:
 
@@ -24,18 +24,18 @@ It is implemented as a **Python package** and can be executed via the command li
 
 ---
 
-## 🚀 Features
+##  Features
 
-* 📥 Load weather dataset from CSV
-* 📊 Compute temperature statistics (avg, min, max)
-* 📉 Detect temperature trends (increasing/decreasing)
-* 📈 Generate and save temperature graph
-* ⚙️ CLI support with arguments (`--file`, `--column`)
-* 📦 Installable Python package using `pyproject.toml`
+*  Load weather dataset from CSV
+*  Compute temperature statistics (avg, min, max)
+*  Detect temperature trends (increasing/decreasing)
+*  Generate and save temperature graph
+*  CLI support with arguments (`--file`, `--column`)
+*  Installable Python package using `pyproject.toml`
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 * Python 3.10+
 * pandas
@@ -43,7 +43,7 @@ It is implemented as a **Python package** and can be executed via the command li
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 weather-analyzer/
@@ -87,7 +87,7 @@ uv run -m weather_analyzer
 
 ---
 
-## ▶️ Usage
+##  Usage
 
 ### Run with default dataset:
 
