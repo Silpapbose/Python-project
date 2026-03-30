@@ -143,15 +143,5 @@ Place the dataset inside: data/weather.csv
 
 ---
 
-##  Conclusion
 
-This project demonstrates how to:
 
-* Build a Python package
-* Work with real-world datasets
-* Perform data analysis and visualization
-* Create a CLI-based tool
-
----
-
-⭐ Feel free to explore and extend this project!
