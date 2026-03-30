@@ -2,12 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def analyze_data(df, column=None):
-    print("\n📊 WEATHER ANALYSIS REPORT")
+    print("\n WEATHER ANALYSIS REPORT")
     print("=" * 45)
 
-    print(f"\n📊 Total Records: {len(df)}")
+    print(f"\n Total Records: {len(df)}")
 
-    print("\n📁 Available columns:")
+    print("\n Available columns:")
     print(list(df.columns))
 
     # Detect column
@@ -16,13 +16,13 @@ def analyze_data(df, column=None):
     else:
         temp_col = df.select_dtypes(include='number').columns[0]
 
-    print(f"\n🌡️ Using column: {temp_col}")
+    print(f"\n Using column: {temp_col}")
 
     avg_temp = df[temp_col].mean()
     max_temp = df[temp_col].max()
     min_temp = df[temp_col].min()
 
-    print("\n📈 Statistics:")
+    print("\n Statistics:")
     print(f"➡ Average Temperature : {avg_temp:.2f}")
     print(f"⬆ Max Temperature     : {max_temp:.2f}")
     print(f"⬇ Min Temperature     : {min_temp:.2f}")
@@ -30,13 +30,13 @@ def analyze_data(df, column=None):
     # Trend detection
     trend = df[temp_col].diff().mean()
 
-    print("\n📉 Trend:")
+    print("\n Trend:")
     if trend > 0:
-        print("📈 Increasing trend")
+        print(" Increasing trend")
     elif trend < 0:
-        print("📉 Decreasing trend")
+        print(" Decreasing trend")
     else:
-        print("➡ Stable")
+        print(" Stable")
 
     # Plot
     try:
@@ -56,7 +56,7 @@ def analyze_data(df, column=None):
         plt.grid()
 
         plt.savefig("temperature_trend.png")
-        print("\n📊 Graph saved as temperature_trend.png")
+        print("\n Graph saved as temperature_trend.png")
 
     except Exception as e:
         print("❌ Plotting failed:", e)
