@@ -16,9 +16,11 @@ This project demonstrates Python packaging, data analysis, and visualization usi
 
 This project reads weather data from a dataset sourced from Kaggle and provides useful insights such as:
 
-* Average, minimum, and maximum temperature
-* Temperature trends over time
-* Visualization of temperature changes
+* Analyze temperature data from a dataset
+* Compute key statistical measures
+* Identify trends in weather data
+* Understand relationships between variables
+* Predict future values using regression
 
 It is implemented as a **Python package** and can be executed via the command line.
 
@@ -27,9 +29,20 @@ It is implemented as a **Python package** and can be executed via the command li
 ##  Features
 
 *  Load weather dataset from CSV
-*  Compute temperature statistics (avg, min, max)
-*  Detect temperature trends (increasing/decreasing)
-*  Generate and save temperature graph
+*  Compute temperature statistics
+     * Mean
+     * Minimum and Maximum
+     * Standard Deviation
+     * Variance
+* Time-series trend detection:
+     * Moving Average
+* Correlation analysis between numeric variables
+* Predictive modeling:
+      * Linear Regression 
+* Visualization:
+    * Actual data
+    * Moving average
+    * Prediction line    
 *  CLI support with arguments (`--file`, `--column`)
 *  Installable Python package using `pyproject.toml`
 
