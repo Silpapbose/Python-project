@@ -127,9 +127,19 @@ python -m weather_analyzer --file data/weather.csv --column "Temperature (C)"
 
 The tool provides:
 
-* Temperature statistics (average, min, max)
-* Trend analysis
-* A saved graph
+The tool provides:
+
+* Total number of records
+* Available columns
+* Selected column for analysis
+* Statistical summary:
+    * Mean, Min, Max, Standard Deviation, Variance
+* Trend detection (Increasing / Decreasing)
+* Correlation with other variables
+* Linear regression equation
+* Next predicted value
+* Graph:
+  * temperature_analysis.png
 
 ---
 
@@ -148,13 +158,7 @@ Place the dataset inside: data/weather.csv
 
 ---
 
-##  Notes
 
-* The project uses a local CSV dataset (no API dependency)
-* Graph is saved as an image instead of opening a GUI window
-* Timezone issues are handled during datetime parsing
-
----
 
 
 
