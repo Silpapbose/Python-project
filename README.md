@@ -8,7 +8,7 @@ This project demonstrates Python packaging, data analysis, and visualization usi
 
 ## Author
 
-**Silpa Bose**
+**Silpa Puthenkudiyil Bose** **-273950**
 
 ---
 
