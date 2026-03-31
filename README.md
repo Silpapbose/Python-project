@@ -94,8 +94,8 @@ pip install -e .
 or
 
 uv venv
-source .venv/bin/activate
-uv pip install -e .
+source .venv/bin/activate 
+uv pip install -e . 
 uv run -m weather_analyzer
 
 ---
