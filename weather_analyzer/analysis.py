@@ -2,12 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def analyze_data(df, column=None):
-    print("\n📊 WEATHER ANALYSIS REPORT")
+    print("\n WEATHER ANALYSIS REPORT")
     print("=" * 50)
 
-    print(f"\n📊 Total Records: {len(df)}")
+    print(f"\n Total Records: {len(df)}")
 
-    print("\n📁 Available columns:")
+    print("\n Available columns:")
     print(list(df.columns))
 
     # Detect column
@@ -16,7 +16,7 @@ def analyze_data(df, column=None):
     else:
         temp_col = df.select_dtypes(include='number').columns[0]
 
-    print(f"\n🌡️ Using column: {temp_col}")
+    print(f"\n Using column: {temp_col}")
 
     # Basic stats
     avg_temp = df[temp_col].mean()
@@ -25,28 +25,28 @@ def analyze_data(df, column=None):
     std_dev = df[temp_col].std()
     variance = df[temp_col].var()
 
-    print("\n📈 Statistics:")
-    print(f"➡ Average Temperature : {avg_temp:.2f}")
-    print(f"⬆ Max Temperature     : {max_temp:.2f}")
-    print(f"⬇ Min Temperature     : {min_temp:.2f}")
-    print(f"📊 Standard Deviation : {std_dev:.2f}")
-    print(f"📊 Variance           : {variance:.2f}")
+    print("\n Statistics:")
+    print(f" Average Temperature : {avg_temp:.2f}")
+    print(f" Max Temperature     : {max_temp:.2f}")
+    print(f" Min Temperature     : {min_temp:.2f}")
+    print(f" Standard Deviation : {std_dev:.2f}")
+    print(f" Variance           : {variance:.2f}")
 
     # Moving Average (Trend Replacement)
     window = 50
     df["moving_avg"] = df[temp_col].rolling(window=window).mean()
 
-    print("\n📉 Trend (Moving Average):")
+    print("\n Trend (Moving Average):")
     if df["moving_avg"].iloc[-1] > df["moving_avg"].iloc[window]:
-        print("📈 Increasing trend")
+        print(" Increasing trend")
     else:
-        print("📉 Decreasing trend")
+        print(" Decreasing trend")
 
     # Correlation
     numeric_cols = df.select_dtypes(include='number')
     correlation = numeric_cols.corr()[temp_col].sort_values(ascending=False)
 
-    print("\n🔗 Correlation with other features:")
+    print("\n Correlation with other features:")
     print(correlation)
 
     # Linear Regression (simple)
@@ -61,14 +61,14 @@ def analyze_data(df, column=None):
 
     df["prediction"] = m * X + b
 
-    print("\n🤖 Linear Regression Model:")
+    print("\n Linear Regression Model:")
     print(f"y = {m:.4f}x + {b:.2f}")
 
     # Predict next value
     next_x = len(df)
     next_prediction = m * next_x + b
 
-    print(f"🔮 Next predicted value: {next_prediction:.2f}")
+    print(f" Next predicted value: {next_prediction:.2f}")
 
     # Plot
     try:
@@ -100,7 +100,7 @@ def analyze_data(df, column=None):
         plt.xticks(rotation=45)
 
         plt.savefig("temperature_analysis.png")
-        print("\n📊 Graph saved as temperature_analysis.png")
+        print("\n Graph saved as temperature_analysis.png")
 
     except Exception as e:
-        print("❌ Plotting failed:", e)
+        print(" Plotting failed:", e)
