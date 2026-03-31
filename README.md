@@ -38,7 +38,7 @@ It is implemented as a **Python package** and can be executed via the command li
      * Moving Average
 * Correlation analysis between numeric variables
 * Predictive modeling:
-      * Linear Regression 
+       * Linear Regression 
 * Visualization:
     * Actual data
     * Moving average
